@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"net/http"
 )
 
@@ -20,5 +19,5 @@ func main() {
 	go forceHTTPS()
 	http.HandleFunc("/", serveSomething)
 	// generate cert.pem and key.pem by running src/crypto/tls/generate_cert.go
-	log.Fatal(http.ListenAndServeTLS(httpsPort, "cert.pem", "key.pem", nil))
+	http.ListenAndServeTLS(httpsPort, "cert.pem", "key.pem", nil)
 }
