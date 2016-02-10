@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 )
 
@@ -19,8 +18,6 @@ func serveSomething(w http.ResponseWriter, r *http.Request) {
 func main() {
 	go forceHTTPS()
 	http.HandleFunc("/", serveSomething)
-	fmt.Println("fart")
 	// generate cert.pem and key.pem by running src/crypto/tls/generate_cert.go
 	http.ListenAndServeTLS(httpsPort, "cert.pem", "key.pem", nil)
-	fmt.Println("another fart")
 }
