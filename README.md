@@ -1,4 +1,4 @@
-# golang-force-https-server
+# Forcing HTTPS with Go
 An implementation of forcing https within the server code layer. Obviously there are several ways to achieve this
 , but this is to demonstrate how easy it is to accomplish with go.
 
