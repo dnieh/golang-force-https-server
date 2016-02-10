@@ -11,4 +11,4 @@ second. The solution was to create a concurrent goroutine.
 Go comes with a certificate generator located in `$GOROOT/src/crypto/tls/generate_cert.go`. You just have to run it
 with `go run <path-to>/generate_cert.go`. You can also use openssl which there are many tutorials on how to do so. Note
 that even though these are self-signed, you will get warnings in all modern browsers. This is completely fine for
-development, but you will eventually need to recieve from a Certificate Authority.
+development, but you will eventually need to go through a Certificate Authority.
